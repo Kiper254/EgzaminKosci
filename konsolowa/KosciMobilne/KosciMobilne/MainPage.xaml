@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="KosciMobilne.MainPage"
+    Title="Kości"
+    BackgroundColor="White">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Spacing="0"
+            Padding="0,10"
+            BackgroundColor="#F5F5DC">
+
+            <Label
+                Text="Gra w kości. Autor 00000000000"
+                FontSize="22"
+                TextColor="White"
+                BackgroundColor="#A52A2A"
+                Padding="6,8"
+                Margin="0,0,0,10"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="RZUĆ KOŚĆMI"
+                BackgroundColor="#D2691E"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Margin="0,10"
+                Clicked="RzucKoscmi_Clicked" />
+
+            <HorizontalStackLayout
+                x:Name="RzadKosci"
+                BackgroundColor="White"
+                Spacing="10"
+                Padding="10"
+                Margin="0,10"
+                HorizontalOptions="Fill"
+                SizeChanged="RzadKosci_SizeChanged">
+
+                <Image
+                    x:Name="Kostka1"
+                    Source="question.jpg"
+                    HeightRequest="60"
+                    WidthRequest="45"
+                    Aspect="AspectFit" />
+
+                <Image
+                    x:Name="Kostka2"
+                    Source="question.jpg"
+                    HeightRequest="60"
+                    WidthRequest="45"
+                    Aspect="AspectFit" />
+
+                <Image
+                    x:Name="Kostka3"
+                    Source="question.jpg"
+                    HeightRequest="60"
+                    WidthRequest="45"
+                    Aspect="AspectFit" />
+
+                <Image
+                    x:Name="Kostka4"
+                    Source="question.jpg"
+                    HeightRequest="60"
+                    WidthRequest="45"
+                    Aspect="AspectFit" />
+
+                <Image
+                    x:Name="Kostka5"
+                    Source="question.jpg"
+                    HeightRequest="60"
+                    WidthRequest="45"
+                    Aspect="AspectFit" />
+
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="WynikLosowaniaLabel"
+                Text="Wynik tego losowania:"
+                TextColor="Black"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                Margin="0,10" />
+
+            <Label
+                x:Name="WynikGryLabel"
+                Text="Wynik gry:"
+                TextColor="Black"
+                HorizontalOptions="Fill"
+                HorizontalTextAlignment="Center"
+                Margin="0,10" />
+
+            <Button
+                Text="RESETUJ WYNIK"
+                BackgroundColor="#D2691E"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Margin="0,10"
+                Clicked="ResetujWynik_Clicked" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
